@@ -77,45 +77,53 @@ export const CertificationsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             My <span className="gradient-text">Certifications</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Professional certifications that validate my skills and knowledge in various technologies.
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-2xl text-center whitespace-nowrap">
+  Professional certifications that validate my skills and knowledge in various technologies.
+</p>
+
+
         </div>
 
         <div className="max-w-4xl mx-auto space-y-4">
-          {certifications.map((cert, index) => (
-            <motion.div
-              key={cert.title}
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={index % 3}
-              className="group bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 p-6 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                  <h3 className="text-lg font-semibold group-hover:text-purple-400 transition-colors">
-                    {cert.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground">
-                    {cert.issuer} • {cert.year}
-                  </p>
-                </div>
-                <a 
-                  href={cert.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-foreground hover:text-purple-400 transition-colors"
-                  aria-label={`View ${cert.title} certificate`}
-                >
-                  View Certificate
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              </div>
-            </motion.div>
-          ))}
+  {certifications.map((cert, index) => (
+    <motion.div
+      key={cert.title}
+      variants={fadeIn}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      custom={index % 3}
+      className="group bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 p-6 hover:border-purple-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10"
+    >
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          {/* Title - Increased size */}
+          <h3 className="text-2xl font-semibold group-hover:text-purple-400 transition-colors">
+            {cert.title}
+          </h3>
+
+          {/* Issuer & year - Increased size */}
+          <p className="text-lg text-muted-foreground">
+            {cert.issuer} • {cert.year}
+          </p>
         </div>
+
+        {/* View Certificate - Increased size */}
+        <a 
+          href={cert.link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 text-lg text-foreground hover:text-purple-400 transition-colors"
+          aria-label={`View ${cert.title} certificate`}
+        >
+          View Certificate
+          <ExternalLink className="w-5 h-5" />
+        </a>
+      </div>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );
