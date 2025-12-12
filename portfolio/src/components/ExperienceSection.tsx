@@ -42,33 +42,49 @@ const internships = [
   },
 ];
 
+/* ------------ UPDATED ExperienceItem WITH BIGGER FONT SIZES ------------ */
+
 const ExperienceItem = ({ exp }: { exp: typeof professionalExperiences[0] }) => (
   <div className="relative pl-12 md:pl-20 pb-12 last:pb-0">
-    <div className={`absolute left-0 md:left-4 w-8 h-8 rounded-full bg-gradient-to-br ${exp.gradient} flex items-center justify-center glow-pulse`}>
-      <Briefcase className="w-4 h-4 text-white" />
+    <div
+      className={`absolute left-0 md:left-4 w-10 h-10 rounded-full bg-gradient-to-br ${exp.gradient} flex items-center justify-center glow-pulse`}
+    >
+      <Briefcase className="w-5 h-5 text-white" />
     </div>
+
     <div className="glass-card-hover p-6">
       <div className="flex flex-wrap items-center gap-3 mb-3">
-        <h3 className="font-display font-semibold text-xl text-foreground">
+        
+        <h3 className="font-display font-semibold text-2xl md:text-3xl text-foreground">
           {exp.title}
         </h3>
-        <span className="text-purple-400">@</span>
-        <span className="text-cyan-400 font-medium">{exp.company}</span>
+
+        <span className="text-purple-400 text-xl">@</span>
+
+        <span className="text-cyan-400 font-medium text-xl md:text-2xl">
+          {exp.company}
+        </span>
       </div>
-      <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-4">
+
+      <div className="flex flex-wrap gap-4 text-base md:text-lg text-muted-foreground mb-4">
         <span className="flex items-center gap-1">
-          <Calendar size={14} />
+          <Calendar size={18} />
           {exp.period}
         </span>
+
         <span className="flex items-center gap-1">
-          <MapPin size={14} />
+          <MapPin size={18} />
           {exp.location}
         </span>
       </div>
-      <ul className="space-y-2">
+
+      <ul className="space-y-3">
         {exp.description.map((item, i) => (
-          <li key={i} className="text-muted-foreground text-sm flex items-start gap-2">
-            <span className="w-1.5 h-1.5 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
+          <li
+            key={i}
+            className="text-muted-foreground text-lg md:text-xl flex items-start gap-3"
+          >
+            <span className="w-2 h-2 bg-purple-500 rounded-full mt-2 flex-shrink-0" />
             {item}
           </li>
         ))}
@@ -76,6 +92,8 @@ const ExperienceItem = ({ exp }: { exp: typeof professionalExperiences[0] }) => 
     </div>
   </div>
 );
+
+/* ------------------------- Internships Section ------------------------- */
 
 export const InternshipsSection = () => {
   return (
@@ -87,9 +105,7 @@ export const InternshipsSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Internships
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Internships</h2>
         </div>
 
         <div className="max-w-3xl mx-auto">
@@ -105,10 +121,11 @@ export const InternshipsSection = () => {
   );
 };
 
+/* ------------------------- Experience Section ------------------------- */
+
 export const ExperienceSection = () => {
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 right-0 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-cyan-600/10 rounded-full blur-3xl" />
@@ -116,21 +133,20 @@ export const ExperienceSection = () => {
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <div className="inline-block px-4 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm font-medium mb-4">
+          <div className="inline-block px-4 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-base font-medium mb-4">
             Experience
           </div>
-          <h2 className="section-title">
+
+          <h2 className="section-title text-4xl md:text-5xl">
             Professional <span className="gradient-text">Journey</span>
           </h2>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          {/* Timeline */}
           <div className="relative">
-            {/* Vertical Line */}
             <div className="absolute left-4 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-purple-600 via-cyan-600 to-purple-600" />
 
-            {professionalExperiences.map((exp, index) => (
+            {professionalExperiences.map((exp) => (
               <ExperienceItem key={exp.title} exp={exp} />
             ))}
           </div>
