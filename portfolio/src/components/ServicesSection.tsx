@@ -52,39 +52,43 @@ export const ServicesSection = () => {
           <div className="inline-block px-4 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-sm font-medium mb-4">
             Services
           </div>
-          <h2 className="section-title">
-            What I <span className="gradient-text">Offer</span>
-          </h2>
-          <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-            Comprehensive solutions from concept to deployment
-          </p>
+          <h2 className="section-title text-4xl md:text-5xl">
+  What I <span className="gradient-text">Offer</span>
+</h2>
+
+<p className="text-muted-foreground mt-4 max-w-2xl mx-auto text-lg md:text-xl">
+  Comprehensive solutions from concept to deployment
+</p>
+
+        </div>
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+  {services.map((service, index) => (
+    <div
+      key={service.title}
+      className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2"
+    >
+      {/* Gradient Glow on Hover */}
+      <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`} />
+      
+      <div className="relative z-10">
+        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-5`}>
+          <service.icon className="w-7 h-7 text-white" />
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={service.title}
-              className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2"
-            >
-              {/* Gradient Glow on Hover */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 blur-xl`} />
-              
-              <div className="relative z-10">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-5`}>
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
-                
-                <h3 className="font-display font-semibold text-xl mb-3 text-foreground">
-                  {service.title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
+        {/* Increased Title Size */}
+        <h3 className="font-display font-semibold text-3xl mb-3 text-foreground">
+          {service.title}
+        </h3>
+
+        {/* Increased Description Size */}
+        <p className="text-muted-foreground leading-relaxed text-lg">
+          {service.description}
+        </p>
+      </div>
+    </div>
+  ))}
+</div>
+
       </div>
     </section>
   );
