@@ -1,10 +1,34 @@
 import { Sparkles, Code, Brain, Rocket } from 'lucide-react';
 
 const highlights = [
-  { icon: Brain, label: 'AI/ML Development', description: 'Building intelligent systems' },
-  { icon: Code, label: 'Full-Stack', description: 'MERN stack expertise' },
-  { icon: Sparkles, label: 'Computer Vision', description: 'YOLOv8, OpenCV, OCR' },
-  { icon: Rocket, label: 'Innovation', description: 'Hackathon enthusiast' },
+  { 
+    icon: Brain, 
+    label: 'AI/ML Development', 
+    description: 'Building intelligent systems',
+    labelClass: 'text-lg font-medium',
+    descClass: 'text-base'
+  },
+  { 
+    icon: Code, 
+    label: 'Full-Stack', 
+    description: 'MERN stack expertise',
+    labelClass: 'text-lg font-medium',
+    descClass: 'text-base'
+  },
+  { 
+    icon: Sparkles, 
+    label: 'Computer Vision', 
+    description: 'YOLOv8, OpenCV, OCR',
+    labelClass: 'text-lg font-medium',
+    descClass: 'text-base'
+  },
+  { 
+    icon: Rocket, 
+    label: 'Innovation', 
+    description: 'Hackathon enthusiast',
+    labelClass: 'text-lg font-medium',
+    descClass: 'text-base'
+  },
 ];
 
 export const AboutSection = () => {
@@ -24,57 +48,54 @@ export const AboutSection = () => {
               About Me
             </div>
             
-            <h2 className="section-title">
-              Crafting <span className="gradient-text">Intelligent</span> Solutions
-            </h2>
+            <h2 className="text-4xl md:text-4xl font-bold leading-tight">
+  Crafting <span className="gradient-text">Intelligent</span> Solutions
+</h2>
 
-            <div className="space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                I'm <span className="text-foreground font-semibold">Abhirami T</span>, an AI Engineer 
-                passionate about building human-centered intelligent systems that make a real difference.
-              </p>
-              <p>
-                My expertise spans across AI/ML development, computer vision, and full-stack engineering. 
-                I love experimenting with emerging technologies and turning complex problems into elegant solutions.
-              </p>
-              <p>
-                From creating assistive technologies for the visually impaired to building productivity 
-                enhancement tools, I'm driven by the impact technology can have on people's lives.
-              </p>
-            </div>
+           <div className="space-y-4 text-xl md:text-2xl text-muted-foreground leading-relaxed">
+  <p>
+    I'm <span className="text-foreground font-semibold">Abhirami T</span>, an AI Engineer 
+    passionate about building human-centered intelligent systems that make a real difference.
+  </p>
+  <p>
+    My expertise spans across AI/ML development, computer vision, and full-stack engineering. 
+    I love experimenting with emerging technologies and turning complex problems into elegant solutions.
+  </p>
+  <p>
+    From creating assistive technologies for the visually impaired to building productivity 
+    enhancement tools, I'm driven by the impact technology can have on people's lives.
+  </p>
+</div>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 pt-4">
               <div className="text-center p-4 glass-card">
-                <div className="text-3xl font-bold gradient-text">5+</div>
-                <div className="text-xs text-muted-foreground mt-1">Projects Completed</div>
+                <div className="text-4xl font-bold gradient-text">5+</div>
+                <div className="text-xl text-muted-foreground mt-2">Projects Completed</div>
               </div>
               <div className="text-center p-4 glass-card">
-                <div className="text-3xl font-bold gradient-text">3</div>
-                <div className="text-xs text-muted-foreground mt-1">Internships</div>
+                <div className="text-4xl font-bold gradient-text">3</div>
+                <div className="text-xl text-muted-foreground mt-2">Internships</div>
               </div>
               <div className="text-center p-4 glass-card">
-                <div className="text-3xl font-bold gradient-text">10+</div>
-                <div className="text-xs text-muted-foreground mt-1">Technologies</div>
+                <div className="text-4xl font-bold gradient-text">10+</div>
+                <div className="text-xl text-muted-foreground mt-2">Technologies</div>
               </div>
             </div>
           </div>
 
           {/* Right - Highlight Cards */}
           <div className="grid grid-cols-2 gap-4">
-            {highlights.map((item, index) => (
-              <div 
-                key={item.label}
-                className="glass-card-hover p-6 group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/20 to-cyan-600/20 flex items-center justify-center mb-4 group-hover:from-purple-600/30 group-hover:to-cyan-600/30 transition-all">
-                  <item.icon className="w-6 h-6 text-purple-400" />
-                </div>
-                <h3 className="font-display font-semibold text-foreground mb-1">{item.label}</h3>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            ))}
+           
+{highlights.map((highlight, index) => (
+  <div key={index} className="p-4 glass-card rounded-xl">
+    <highlight.icon className="w-8 h-8 text-purple-400 mb-3" />
+    <h4 className={highlight.labelClass || "text-lg font-medium"}>{highlight.label}</h4>
+    <p className={highlight.descClass || "text-base text-muted-foreground"}>
+      {highlight.description}
+    </p>
+  </div>
+))}
           </div>
         </div>
       </div>
