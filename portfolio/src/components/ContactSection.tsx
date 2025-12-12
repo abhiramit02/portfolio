@@ -67,8 +67,13 @@ export const ContactSection = () => {
                     <item.icon className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <div className="text-sm text-muted-foreground">{item.label}</div>
-                    <div className="text-foreground group-hover:text-purple-400 transition-colors">
+                    {/* Label - Increased size */}
+                    <div className="text-lg text-muted-foreground">
+                      {item.label}
+                    </div>
+
+                    {/* Value - Increased size */}
+                    <div className="text-2xl text-foreground group-hover:text-purple-400 transition-colors">
                       {item.value}
                     </div>
                   </div>
@@ -77,7 +82,11 @@ export const ContactSection = () => {
             </div>
 
             <div className="pt-6 border-t border-white/10">
-              <h4 className="font-semibold mb-6 text-foreground text-lg">Follow Me</h4>
+              {/* Follow Me - Increased size */}
+              <h4 className="font-semibold mb-6 text-foreground text-3xl">
+                Follow Me
+              </h4>
+
               <div className="flex justify-center gap-6">
                 {socials.map((social) => (
                   <a
