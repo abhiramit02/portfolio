@@ -59,32 +59,41 @@ export const AchievementsSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             My <span className="gradient-text">Achievements</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            Recognitions and awards that highlight my journey and dedication to excellence.
-          </p>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-2xl text-center whitespace-nowrap">
+  Recognitions and awards that highlight my journey and dedication to excellence.
+</p>
+
+
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={achievement.title}
-              variants={fadeIn}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={index % 3}
-              className="bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 p-6 hover:border-amber-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
-            >
-              <div className="flex items-center gap-3 mb-3">
-                {achievement.icon}
-                <h3 className="text-lg font-semibold">{achievement.title}</h3>
-              </div>
-              <p className="text-muted-foreground text-sm">
-                {achievement.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+  {achievements.map((achievement, index) => (
+    <motion.div
+      key={achievement.title}
+      variants={fadeIn}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      custom={index % 3}
+      className="bg-card/50 backdrop-blur-sm rounded-xl border border-border/50 p-6 hover:border-amber-500/30 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/10"
+    >
+      <div className="flex items-center gap-3 mb-3">
+        {achievement.icon}
+
+        {/* Increased Title Size */}
+        <h3 className="text-2xl font-semibold">
+          {achievement.title}
+        </h3>
+      </div>
+
+      {/* Increased Description Size */}
+      <p className="text-muted-foreground text-lg">
+        {achievement.description}
+      </p>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );
