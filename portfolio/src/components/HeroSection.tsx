@@ -69,11 +69,11 @@ export const HeroSection = () => {
               </span>
             </div>
 
-            <p className="text-lg text-muted-foreground max-w-lg leading-relaxed">
-              Passionate AI Engineer building human-centered intelligent systems. 
-              I create AI agents, computer vision models, and full-stack applications 
-              that solve real-world problems.
-            </p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl leading-relaxed">
+  Passionate AI Engineer building human-centered intelligent systems. 
+  I create AI agents, computer vision models, and full-stack applications 
+  that solve real-world problems.
+</p>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <a 
