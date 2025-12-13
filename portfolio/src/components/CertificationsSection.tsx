@@ -5,31 +5,31 @@ const certifications = [
   {
     title: 'SQL Server on Linux',
     issuer: 'Microsoft',
-    year: '2024',
+    year: '2025',
     link: 'https://drive.google.com/file/d/19mCD1uCGkxn2NWlQnz4gVDNJd_DeTTKQ/view'
   },
   {
     title: 'AWS S3 Basics',
     issuer: 'Coursera',
-    year: '2024',
+    year: '2025',
     link: 'https://drive.google.com/file/d/1wJ9ZaQOPW4vdgH0psPtiaOK3CvZZdfbg/view'
   },
   {
     title: 'AI-Machine Learning Engineer',
     issuer: 'Reliance Foundation',
-    year: '2024',
+    year: '2025',
     link: 'https://drive.google.com/file/d/161_D6VEnExwFaC0knNfZk3cu5Z5UjJc6/view'
   },
   {
     title: 'Large Language Models',
     issuer: 'Hugging Face',
-    year: '2024',
+    year: '2025',
     link: 'https://drive.google.com/file/d/1kxDjdq4h5H1djTqwq92QMsD6zTCahNyE/view'
   },
   {
     title: 'Build a Computer Vision App with Azure Cognitive Services',
     issuer: 'Microsoft – Coursera',
-    year: '2024',
+    year: '2025',
     link: 'https://drive.google.com/file/d/17n4vU9BRlOr9zI5XdgIdzw25OPl4PWJx/view'
   },
   {
@@ -49,6 +49,18 @@ const certifications = [
     issuer: 'Great Learning',
     year: '2024',
     link: 'https://drive.google.com/file/d/1j0oiH9Iuv93bGGVPRdcfjbct_b4GtnL2/view'
+  },
+  {
+    title:'Cloud Foundations',
+    issuer:'AWS',
+    year:'2025',
+    link:'https://drive.google.com/file/d/1FDS4ODnNLIvg0Xq3Q1z8gPO7wHhddfn-/view?usp=sharing'
+  },
+  {
+    title:'Networking Basics',
+    issuer:'Cisco',
+    year:'2025',
+    link:'https://drive.google.com/file/d/1gbY5WzPdr_VLgcwhLtn1NcHxVJEkK-uG/view?usp=sharing'
   }
 ];
 
