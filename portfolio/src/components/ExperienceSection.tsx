@@ -13,6 +13,18 @@ const professionalExperiences = [
     ],
     gradient: 'from-purple-600 to-pink-600',
   },
+  {
+  title: 'AI & Data Engineering Intern',
+  company: 'Digital Back Office Ltd.',
+  location: 'Remote',
+  period: 'Jan 2026 – Mar 2026',
+  description: [
+    'Worked on structured learning and practical AI applications involving LLMs and Retrieval-Augmented Generation (RAG)',
+    'Gained hands-on experience in modern data stack technologies including Python, Airflow, and Streamlit',
+    'Learned ETL/ELT pipeline development and data engineering concepts through real-world tasks and capstone projects',
+  ],
+  gradient: 'from-cyan-600 to-blue-600',
+}
 ];
 
 const internships = [
