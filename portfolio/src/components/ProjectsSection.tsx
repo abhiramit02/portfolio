@@ -37,6 +37,44 @@ const projects = [
     gradient: 'from-blue-600 to-cyan-600',
     github: 'https://github.com/abhiramit02/SenseRoute'
   },
+  
+  {
+  title: 'Document Search Engine',
+  subtitle: 'Semantic AI-Based Knowledge Retrieval System',
+  year: '2026',
+  description: 'Developed a full-stack AI document assistant that extracts content from PDFs and DOCX files, converts them into semantic embeddings, and delivers accurate context-based responses through an interactive chat interface. Implemented vector search, conversation tracking, and document source referencing for efficient knowledge retrieval.',
+  tech: [
+    'Python',
+    'FastAPI',
+    'React.js',
+    'Vite',
+    'ChromaDB',
+    'Sentence Transformers',
+    'Cohere API',
+    'OCR',
+    'RAG'
+  ],
+  gradient: 'from-emerald-600 to-cyan-600',
+  github: 'https://github.com/abhiramit02/Document_Search_Engine'
+},
+{
+  title: 'BookMyShow Clone',
+  subtitle: 'Full Stack Movie Ticket Booking Application',
+  year: '2025',
+  description: 'Developed a full-stack movie ticket booking platform where users can create accounts, log in securely, browse available movies, choose theatres and seats, and confirm ticket bookings through an interactive interface. Implemented authentication, seat selection, and real-time booking workflows to enhance user experience.',
+  tech: [
+    'React.js',
+    'Node.js',
+    'Express.js',
+    'MongoDB',
+    'JWT Authentication',
+    'REST API',
+    'CSS'
+  ],
+  gradient: 'from-red-600 to-orange-600',
+  github: 'https://github.com/abhiramit02/bookmyshow'
+}
+
 ];
 
 export const ProjectsSection = () => {
