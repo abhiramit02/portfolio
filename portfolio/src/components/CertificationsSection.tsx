@@ -3,6 +3,11 @@ import { motion } from 'framer-motion';
 
 const certifications = [
   {
+    title: 'AWS Certified Cloud Practitioner',
+    issuer: 'AWS',
+    year: '2026',
+    link: 'https://drive.google.com/file/d/1Xjw9xQA_wbKIAi90LkOGD4J9CeCH2aRV/view?usp=sharing'
+  }, {
     title: 'SQL Server on Linux',
     issuer: 'Microsoft',
     year: '2025',
